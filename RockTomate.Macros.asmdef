@@ -1,0 +1,10 @@
+{
+    "name": "RockTomate.Macros",
+    "references": [
+        "RockTomate.Core"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}
