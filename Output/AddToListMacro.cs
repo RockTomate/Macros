@@ -25,11 +25,7 @@ namespace HardCodeLab.RockTomate.Core.Macros
         protected override bool OnVariableUpdate(JobContext context, string variableName, object newValue)
         {
             BaseField targetField;
-            if (!context.TryGetField(variableName, out targetField))
-            {
-                RockLog.WriteLine(LogTier.Error, string.Format("Variable \"{0}\" doesn't exist", variableName));
-                return false;
-            }
+            GetOrCreateField<IEnumerable>(context, variableName, out targetField);
 
             var targetFieldValue = targetField.GetValue(context);
 
