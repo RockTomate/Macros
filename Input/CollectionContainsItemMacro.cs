@@ -15,7 +15,7 @@ namespace HardCodeLab.RockTomate.Core.Macros
             return new[]
             {
                 MacroParameter.Create<IEnumerable>("Collection to check."),
-                MacroParameter.Create<object>("Item to look for"),
+                MacroParameter.Create<object>("Item to look for."),
             };
         }
 
