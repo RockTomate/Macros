@@ -11,8 +11,8 @@ assignees: ElmarTalibzade
 *describe in detail what do you expect this step to do*
 
 **Parameters**
-* parameter1 : parameter_type
-* parameter2 : parameter_type
+* parameter1 : `parameter_type`
+* parameter2 : `parameter_type`
 
 **Return Value**
-*value type it would return*
+`return_type`
