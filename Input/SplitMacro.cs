@@ -10,12 +10,12 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class SplitMacro : BaseMacro<IEnumerable>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<string>("String that will be split."),
-                MacroParameter.Create<string>("Character separator.")
+                Parameter.Create<string>("String that will be split."),
+                Parameter.Create<string>("Character separator.")
             };
         }
 

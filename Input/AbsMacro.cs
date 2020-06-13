@@ -9,11 +9,11 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class AbsMacro : BaseMacro<decimal>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<float>("A number that is greater than or equal to MinValue, but less than or equal to MaxValue."),
+                Parameter.Create<float>("A number that is greater than or equal to MinValue, but less than or equal to MaxValue."),
             };
         }
 

@@ -14,11 +14,11 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class LoadAssetMacro : BaseMacro<Object[]>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<string>("Path to the asset that will be loaded."),
+                Parameter.Create<string>("Path to the asset that will be loaded."),
             };
         }
 

@@ -10,11 +10,11 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class CollectionItemCountMacro : BaseMacro<int>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<IEnumerable>("Collection to measure."),
+                Parameter.Create<IEnumerable>("Collection to measure."),
             };
         }
 

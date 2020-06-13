@@ -9,12 +9,12 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class ResolvePathMacro : BaseMacro<string[]>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<string>("Path to resolve."),
-                MacroParameter.Create<bool>("Whether to convert paths to be relative to root project directory."),
+                Parameter.Create<string>("Path to resolve."),
+                Parameter.Create<bool>("Whether to convert paths to be relative to root project directory."),
             };
         }
 

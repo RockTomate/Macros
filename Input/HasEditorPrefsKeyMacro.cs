@@ -12,11 +12,11 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class HasEditorPrefsKeyMacro : BaseMacro<bool>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<string>("Key of the pref to check against."),
+                Parameter.Create<string>("Key of the pref to check against."),
             };
         }
 

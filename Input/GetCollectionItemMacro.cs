@@ -10,12 +10,12 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class GetCollectionItemMacro : BaseMacro<object>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<IEnumerable>("Target collection."),
-                MacroParameter.Create<int>("Index of an item."), 
+                Parameter.Create<IEnumerable>("Target collection."),
+                Parameter.Create<int>("Index of an item."), 
             };
         }
 

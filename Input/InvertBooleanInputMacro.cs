@@ -9,11 +9,11 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class InvertBooleanInputMacro : BaseMacro<bool>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<bool>("Boolean which will be inverted"),
+                Parameter.Create<bool>("Boolean which will be inverted"),
             };
         }
 

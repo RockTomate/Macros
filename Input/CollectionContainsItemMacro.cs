@@ -10,12 +10,12 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class CollectionContainsItemMacro : BaseMacro<bool>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<IEnumerable>("Collection to check."),
-                MacroParameter.Create<object>("Item to look for."),
+                Parameter.Create<IEnumerable>("Collection to check."),
+                Parameter.Create<object>("Item to look for."),
             };
         }
 

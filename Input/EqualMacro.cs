@@ -8,12 +8,12 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class EqualMacro : BaseMacro<bool>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<object>("First object to compare."),
-                MacroParameter.Create<object>("Second object to compare.")
+                Parameter.Create<object>("First object to compare."),
+                Parameter.Create<object>("Second object to compare.")
             };
         }
 

@@ -8,12 +8,12 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class SumMacro : BaseMacro<float>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<float>("First value."),
-                MacroParameter.Create<float>("Second value."),
+                Parameter.Create<float>("First value."),
+                Parameter.Create<float>("Second value."),
             };
         }
 

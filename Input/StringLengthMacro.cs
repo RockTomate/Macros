@@ -8,11 +8,11 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class StringLengthMacro : BaseMacro<int>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<string>("String to count characters"),
+                Parameter.Create<string>("String to count characters"),
             };
         }
 

@@ -12,12 +12,12 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class AddToListMacro : BaseOutputMacro
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<string>("Target variable name."),
-                MacroParameter.Create<object>("Object to add to."),
+                Parameter.Create<string>("Target variable name."),
+                Parameter.Create<object>("Object to add to."),
             };
         }
 

@@ -8,12 +8,12 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class StringEndsWithMacro : BaseMacro<bool>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<string>("Original string."),
-                MacroParameter.Create<string>("The string to compare."),
+                Parameter.Create<string>("Original string."),
+                Parameter.Create<string>("The string to compare."),
             };
         }
 

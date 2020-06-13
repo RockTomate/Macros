@@ -9,11 +9,11 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class PrettyStringMacro : BaseMacro<string>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<string>("String to be prettified"),
+                Parameter.Create<string>("String to be prettified"),
             };
         }
 

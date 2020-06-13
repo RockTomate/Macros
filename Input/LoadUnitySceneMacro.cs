@@ -13,11 +13,11 @@ namespace HardCodeLab.RockTomate.Core.Macros
     public class LoadUnitySceneMacro : BaseMacro<UnityScene>
     {
         /// <inheritdoc />
-        protected override MacroParameter[] GetParameters()
+        protected override Parameter[] GetParameters()
         {
             return new[]
             {
-                MacroParameter.Create<string>("Path to a file to read."),
+                Parameter.Create<string>("Path to a file to read."),
             };
         }
 
