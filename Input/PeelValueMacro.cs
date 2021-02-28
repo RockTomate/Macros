@@ -34,7 +34,7 @@ namespace HardCodeLab.RockTomate.Core.Macros
 
             var propInfo = objType.GetProperty(name);
             if (propInfo != null)
-                return propInfo.GetValue(obj);
+                return propInfo.GetValue(obj, null);
 
             RockLog.WriteLine(LogTier.Info,
                 string.Format("Couldn't find property/field (\"{0}\") that can be extracted from object (\"{1}\")",
