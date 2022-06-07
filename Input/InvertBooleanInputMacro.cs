@@ -1,5 +1,4 @@
-﻿using System;
-using HardCodeLab.RockTomate.Core.Data;
+﻿using HardCodeLab.RockTomate.Core.Data;
 using HardCodeLab.RockTomate.Core.Enums;
 using HardCodeLab.RockTomate.Core.Attributes;
 
