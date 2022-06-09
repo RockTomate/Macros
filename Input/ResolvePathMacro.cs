@@ -1,4 +1,5 @@
-﻿using HardCodeLab.RockTomate.Core.Data;
+﻿using System.IO;
+using HardCodeLab.RockTomate.Core.Data;
 using HardCodeLab.RockTomate.Core.Enums;
 using HardCodeLab.RockTomate.Core.Helpers;
 using HardCodeLab.RockTomate.Core.Attributes;
@@ -24,7 +25,7 @@ namespace HardCodeLab.RockTomate.Core.Macros
             var path = GetArg<string>(args, 0);
             var convertToRelative = GetArg<bool>(args, 1);
 
-            return PathHelpers.ResolvePaths(path, convertToRelative);
+            return PathHelpers.ResolvePaths(path, false, SearchOption.AllDirectories, convertToRelative);
         }
     }
 }
