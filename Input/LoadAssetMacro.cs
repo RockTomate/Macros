@@ -28,7 +28,7 @@ namespace HardCodeLab.RockTomate.Core.Macros
         {
             var assetPath = GetArg<string>(args, 0);
 
-            var resolvedAssetPaths = PathHelpers.ResolvePaths(assetPath, false, SearchOption.AllDirectories, false);
+            var resolvedAssetPaths = PathHelpers.ResolvePaths(assetPath, false, SearchOption.AllDirectories, true);
             var results = new Object[resolvedAssetPaths.Length];
 
             for (var i = 0; i < resolvedAssetPaths.Length; i++)
