@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System.IO;
+using UnityEditor;
 using UnityEngine;
 using HardCodeLab.RockTomate.Core.Data;
 using HardCodeLab.RockTomate.Core.Enums;
@@ -27,7 +28,7 @@ namespace HardCodeLab.RockTomate.Core.Macros
         {
             var assetPath = GetArg<string>(args, 0);
 
-            var resolvedAssetPaths = PathHelpers.ResolvePaths(assetPath, true);
+            var resolvedAssetPaths = PathHelpers.ResolvePaths(assetPath, false, SearchOption.AllDirectories, true);
             var results = new Object[resolvedAssetPaths.Length];
 
             for (var i = 0; i < resolvedAssetPaths.Length; i++)

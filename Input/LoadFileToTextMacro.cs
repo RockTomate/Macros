@@ -27,7 +27,7 @@ namespace HardCodeLab.RockTomate.Core.Macros
         {
             var filePath = GetArg<string>(args, 0);
 
-            var resolvedPaths = PathHelpers.ResolvePaths(filePath);
+            var resolvedPaths = PathHelpers.ResolvePaths(filePath, false, SearchOption.AllDirectories, false);
             var results = new string[resolvedPaths.Length];
 
             for (var i = 0; i < resolvedPaths.Length; i++)

@@ -6,8 +6,8 @@ using HardCodeLab.RockTomate.Core.Attributes;
 
 namespace HardCodeLab.RockTomate.Core.Macros
 {
-    [Macro(FieldType.Input, "path")]
-    public class ResolvePathMacro : BaseMacro<string[]>
+    [Macro(FieldType.Input, "dirpath")]
+    public class ResolveDirPathMacro : BaseMacro<string[]>
     {
         /// <inheritdoc />
         protected override Parameter[] GetParameters()
@@ -16,6 +16,7 @@ namespace HardCodeLab.RockTomate.Core.Macros
             {
                 Parameter.Create<string>("Path to resolve."),
                 Parameter.Create<bool>("Whether to convert paths to be relative to root project directory."),
+                Parameter.Create<bool>("Whether the search should be shallow or not (top directories only)"),
             };
         }
 
@@ -24,8 +25,9 @@ namespace HardCodeLab.RockTomate.Core.Macros
         {
             var path = GetArg<string>(args, 0);
             var convertToRelative = GetArg<bool>(args, 1);
+            var searchOption = GetArg<bool>(args, 2) ? SearchOption.TopDirectoryOnly : SearchOption.AllDirectories;
 
-            return PathHelpers.ResolvePaths(path, false, SearchOption.AllDirectories, convertToRelative);
+            return PathHelpers.ResolvePaths(path, true, searchOption, convertToRelative);
         }
     }
 }
